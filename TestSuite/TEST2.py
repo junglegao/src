@@ -1,0 +1,36 @@
+'''
+Created on Nov 18, 2013
+
+@author: pli
+'''
+from ChorusCore.TestSuiteManagement import MyTestCase
+# from ChorusCore import TestScope
+
+class TEST2(MyTestCase):
+    
+    @classmethod
+    def setUpClass(cls):   
+        super(TEST2,cls).setUpClass()
+        
+    def setUp(self):  
+        MyTestCase.setUp(self)   
+        
+    def tearDown(self):       
+        MyTestCase.tearDown(self)
+
+    @classmethod
+    def tearDownClass(cls):
+        super(TEST2,cls).tearDownClass()
+        
+#     @TestScope.setscope(TestScope.Scope.All)
+    def testC03(self):
+        data1={"instance_id": 1, "additional_keylist": [{"key_id": "Office Location", "value": "physicaldeliveryofficename", "key_name": "Office Location"}, {"key_id": "use_email_login_workaround", "value": "0", "key_name": "Can Use Email to Login"}, {"key_id": "Email", "value": "mail", "key_name": "Email"}, {"key_id": "Employee at MSTR for", "value": "extensionattribute6", "key_name": "Employee at MSTR for"}, {"key_id": "Work Phone", "value": "telephonenumber", "key_name": "Work Phone"}], "required_keylist": [{"key_id": "last_name_key", "value": "sn", "key_name": "Last Name"}, {"key_id": "mail_key", "value": "mail", "key_name": "Mail"}, {"key_id": "first_name_key", "value": "givenName", "key_name": "First Name"}, {"key_id": "server", "value": "ldap://10.15.70.11:3268", "key_name": "Server"}, {"key_id": "photo_key", "value": "extensionAttribute1", "key_name": "Photo"}, {"key_id": "user", "value": "svc-ldap-usher@corp.microstrategy.com", "key_name": "Admin Account"}, {"key_id": "company_key", "value": "company", "key_name": "Organization"}, {"key_id": "pass", "value": "BiSA4whA", "key_name": "IDM Password"}, {"key_id": "name_key", "value": "cn", "key_name": "Full Name"}, {"key_id": "default_field", "value": "corp\\", "key_name": "Domain"}, {"key_id": "root", "value": "\"OU=MicroStrategy Enterprise,DC=corp,DC=microsrategy,DC=com\"", "key_name": "Root Configuration"}, {"key_id": "security_auth", "value": "simple", "key_name": "Security Authentication Type"}, {"key_id": "idm_user_key", "value": "sAMAccountName", "key_name": "Account Name"}, {"key_id": "title_key", "value": "title", "key_name": "Title"}], "name": "LDAP", "type_id": 101}
+        data2={"instance_id":1,"name":"LDAP","type_id":101,"required_keylist":[{"key_id":"company_key","key_name":"Organization","value":"company"},{"key_id":"default_field","key_name":"Domain","value":"corp\\"},{"key_id":"first_name_key","key_name":"First Name","value":"givenName"},{"key_id":"idm_user_key","key_name":"Account Name","value":"sAMAccountName"},{"key_id":"last_name_key","key_name":"Last Name","value":"sn"},{"key_id":"mail_key","key_name":"Mail","value":"mail"},{"key_id":"name_key","key_name":"Full Name","value":"cn"},{"key_id":"pass","key_name":"IDM Password","value":"BiSA4whA"},{"key_id":"photo_key","key_name":"Photo","value":"extensionAttribute1"},{"key_id":"root","key_name":"Root Configuration","value":"\"OU=MicroStrategy Enterprise,DC=corp,DC=microstrategy,DC=com\""},{"key_id":"security_auth","key_name":"Security Authentication Type","value":"simple"},{"key_id":"server","key_name":"Server","value":"ldap:\/\/10.15.70.11:3268"},{"key_id":"title_key","key_name":"Title","value":"title"},{"key_id":"user","key_name":"Admin Account","value":"svc-ldap-usher@corp.microstrategy.com"}],"additional_keylist":[{"key_id":"Employee at MSTR for","key_name":"Employee at MSTR for","value":"extensionattribute6"},{"key_id":"Email","key_name":"Email","value":"mail"},{"key_id":"Office Location","key_name":"Office Location","value":"physicaldeliveryofficename"},{"key_id":"Work Phone","key_name":"Work Phone","value":"telephonenumber"},{"key_id":"use_email_login_workaround","key_name":"Can Use Email to Login","value":"0"}]}
+        self.assertEqualOnFly("compare2", data1, data2)
+        self.assertEqual("compare1", data1)
+        
+    def testC04(self):
+        data1={"instance_id": 1, "additional_keylist": [{"key_id": "Office Location", "value": "physicaldeliveryofficename", "key_name": "Office Location"}, {"key_id": "use_email_login_workaround", "value": "0", "key_name": "Can Use Email to Login"}, {"key_id": "Email", "value": "mail", "key_name": "Email"}, {"key_id": "Employee at MSTR for", "value": "extensionattribute6", "key_name": "Employee at MSTR for"}, {"key_id": "Work Phone", "value": "telephonenumber", "key_name": "Work Phone"}], "required_keylist": [{"key_id": "last_name_key", "value": "sn", "key_name": "Last Name"}, {"key_id": "mail_key", "value": "mail", "key_name": "Mail"}, {"key_id": "first_name_key", "value": "givenName", "key_name": "First Name"}, {"key_id": "server", "value": "ldap://10.15.70.11:3268", "key_name": "Server"}, {"key_id": "photo_key", "value": "extensionAttribute1", "key_name": "Photo"}, {"key_id": "user", "value": "svc-ldap-usher@corp.microstrategy.com", "key_name": "Admin Account"}, {"key_id": "company_key", "value": "company", "key_name": "Organization"}, {"key_id": "pass", "value": "BiSA4whA", "key_name": "IDM Password"}, {"key_id": "name_key", "value": "cn", "key_name": "Full Name"}, {"key_id": "default_field", "value": "corp\\", "key_name": "Domain"}, {"key_id": "root", "value": "\"OU=MicroStrategy Enterprise,DC=corp,DC=microsrategy,DC=com\"", "key_name": "Root Configuration"}, {"key_id": "security_auth", "value": "simple", "key_name": "Security Authentication Type"}, {"key_id": "idm_user_key", "value": "sAMAccountName", "key_name": "Account Name"}, {"key_id": "title_key", "value": "title", "key_name": "Title"}], "name": "LDAP", "type_id": 101}
+        data2={"instance_id":1,"name":"LDAP","type_id":101,"required_keylist":[{"key_id":"company_key","key_name":"Organization","value":"company"},{"key_id":"default_field","key_name":"Domain","value":"corp\\"},{"key_id":"first_name_key","key_name":"First Name","value":"givenName"},{"key_id":"idm_user_key","key_name":"Account Name","value":"sAMAccountName"},{"key_id":"last_name_key","key_name":"Last Name","value":"sn"},{"key_id":"mail_key","key_name":"Mail","value":"mail"},{"key_id":"name_key","key_name":"Full Name","value":"cn"},{"key_id":"pass","key_name":"IDM Password","value":"BiSA4whA"},{"key_id":"photo_key","key_name":"Photo","value":"extensionAttribute1"},{"key_id":"root","key_name":"Root Configuration","value":"\"OU=MicroStrategy Enterprise,DC=corp,DC=microstrategy,DC=com\""},{"key_id":"security_auth","key_name":"Security Authentication Type","value":"simple"},{"key_id":"server","key_name":"Server","value":"ldap:\/\/10.15.70.11:3268"},{"key_id":"title_key","key_name":"Title","value":"title"},{"key_id":"user","key_name":"Admin Account","value":"svc-ldap-usher@corp.microstrategy.com"}],"additional_keylist":[{"key_id":"Employee at MSTR for","key_name":"Employee at MSTR for","value":"extensionattribute6"},{"key_id":"Email","key_name":"Email","value":"mail"},{"key_id":"Office Location","key_name":"Office Location","value":"physicaldeliveryofficename"},{"key_id":"Work Phone","key_name":"Work Phone","value":"telephonenumber"},{"key_id":"use_email_login_workaround","key_name":"Can Use Email to Login","value":"0"}]}
+        self.assertEqualOnFly("compare2", data1, data2)
+        self.assertEqual("compare1", data1)
