@@ -56,10 +56,10 @@ if __name__ == '__main__':
                       help="config file name, e.g: test.cfg")
     parser.add_option("-p","--path",dest="configpath",
                       default="",
-                      help="config file path, default: config/, e.g. test")
+                      help="config file path, default: Config/, e.g. test")
     parser.add_option("-o","--output",dest="outputpath",
                       default="",
-                      help="output file path, default: output/, e.g: output")
+                      help="output file path, default: Output/, e.g: Output")
     options, args = parser.parse_args()
     
     if not options.configfile:
