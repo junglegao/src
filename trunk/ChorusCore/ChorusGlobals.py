@@ -29,3 +29,12 @@ def set_logger(loggerobj):
 def get_logger():
     '''Return logger'''
     return logger
+
+def set_suiteinfo(suite_info):
+    '''Mark suiteinfo as global'''
+    global suiteinfo
+    suiteinfo = suite_info
+
+def get_suiteinfo():
+    '''Return suiteinfo'''
+    return suiteinfo

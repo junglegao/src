@@ -17,7 +17,7 @@ class MyProject(ProjectConfiguration):
         self.options=options
         self.set_output_folder()
         self.set_configfile()
-        self.set_logserver()
+        self.set_logserver(level=Level.debug, colorconsole = False)
         self.logserver.add_filehandler(level=Level.error,
                                        filepath=self.outputdir,filename="error.log")
         self.logserver.add_filehandler(level=Level.info,
