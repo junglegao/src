@@ -1,9 +1,8 @@
-src
+#Chorus
 ===
 
-Chorus Test Framework
-
+Test Framework for Automation test
 **let's rock**
 ##usage##
-python RunTestSuite  --config==test.cfg
+python RunTestSuite  --config=test.cfg
 
